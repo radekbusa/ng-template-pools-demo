@@ -1,4 +1,8 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="container-fluid">
+  <h1 class="mt-4">Angular Template Pools Example</h1>
+  <div class="alert alert-primary mb-2" role="alert">
+    <strong>Template Pools</strong> are a neat way to share <code>&lt;ng-template&gt;</code>s from a centralized
+    template repository between multiple components to avoid HTML duplication and performance issues.
+  </div>
+  <router-outlet></router-outlet>
+</div>

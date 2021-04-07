@@ -1,0 +1,19 @@
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    {{ label }}
+  </button>
+  <div *ngIf="items.length" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a *ngFor="let item of items" class="dropdown-item"
+       href="#" (click)="itemClicked($event, item)">
+      <ng-container *ngTemplateOutlet="customItemTemplate || defaultItemTemplate; context: {$implicit: item}">
+      </ng-container>
+    </a>
+  </div>
+  <div *ngIf="!items.length" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item disabled" href="#">No items</a>
+  </div>
+</div>
+
+<ng-template #defaultItemTemplate let-item>
+  {{ item.label }}
+</ng-template>

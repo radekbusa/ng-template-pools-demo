@@ -1,0 +1,11 @@
+<div *ngIf="selectedItem">
+  <h2>Selected country (another component)</h2>
+  <small>
+    BTW, the stuff you see in the box below uses a <code>&lt;ng-template&gt;</code> shared between the dropdown and
+    this component using the Template Pool.
+  </small>
+  <div style="border: solid 1px #000000">
+    <ng-container *ngTemplateOutlet="templatePool.templates.countryItemTemplate; context: {$implicit: selectedItem}">
+    </ng-container>
+  </div>
+</div>

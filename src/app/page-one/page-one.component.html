@@ -1,0 +1,19 @@
+<div class="container-fluid mt-4">
+  <div class="row">
+    <div class="col-6">
+      <h2>Select a country (dropdown component)</h2>
+      <app-dropdown
+        label="Available countries"
+        [items]="items"
+        [customItemTemplate]="templatePool.templates.countryItemTemplate"
+        (itemSelected)="itemSelected($event)">
+      </app-dropdown>
+      <pre *ngIf="selectedItem" class="mt-4">{{ selectedItem | json }}</pre>
+    </div>
+    <div class="col-6">
+      <app-selected-item
+        [selectedItem]="selectedItem">
+      </app-selected-item>
+    </div>
+  </div>
+</div>

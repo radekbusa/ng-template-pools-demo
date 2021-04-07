@@ -1,0 +1,14 @@
+<ng-template #countryItemTemplate let-item>
+  <div class="d-flex">
+    <div>
+      <span class="flag-icon flag-icon-{{item.id}} mt-3 mr-2"></span>
+    </div>
+    <div>
+      {{ item.label }}<br>
+      <small class="text-muted">{{ item.customData.region }}</small>
+    </div>
+  </div>
+</ng-template>
+
+<!-- More ng-templates similar to the top one can be added here. -->
+
